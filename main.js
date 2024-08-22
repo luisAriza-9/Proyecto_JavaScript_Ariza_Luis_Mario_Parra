@@ -23,7 +23,7 @@ async function obtenerPersonajes() {
 
     const contenedorPersonajes = document.getElementById('personajes-container');
 
-    personajes.slice(0, 10).forEach(personaje => {
+    personajes.slice().forEach(personaje => {
         const personajeDiv = document.createElement('div');
         personajeDiv.classList.add('personaje');
 
@@ -44,9 +44,9 @@ async function obtenerPlanetas() {
     const datos = await respuesta.json();
     const planetas = datos.results;
 
-    const contenedorPlanetas = document.getElementById('planeta-container');
+    const contenedorPlanetas = document.getElementById('planetas-container');
 
-    planetas.slice(0, 10).forEach(planeta => {
+    planetas.slice().forEach(planeta => {
         const planetaDiv = document.createElement('div');
         planetaDiv.classList.add('planeta');
 
@@ -68,9 +68,9 @@ async function obtenerEspecies() {
     const datos = await respuesta.json();
     const especies = datos.results;
 
-    const contenedorEspecies = document.getElementById('especie-container');
+    const contenedorEspecies = document.getElementById('especies-container');
 
-    especies.slice(0, 10).forEach(especie => {
+    especies.slice().forEach(especie => {
         const especieDiv = document.createElement('div');
         especieDiv.classList.add('especie');
 
@@ -91,9 +91,9 @@ async function obtenerNaves() {
     const datos = await respuesta.json();
     const naves = datos.results;
 
-    const contenedorNaves = document.getElementById('nave-container');
+    const contenedorNaves = document.getElementById('naves-container');
 
-    naves.slice(0, 10).forEach(nave => {
+    naves.slice().forEach(nave => {
         const naveDiv = document.createElement('div');
         naveDiv.classList.add('nave');
 
@@ -114,9 +114,9 @@ async function obtenerVehiculos() {
     const datos = await respuesta.json();
     const vehiculos = datos.results;
 
-    const contenedorVehiculos = document.getElementById('vehiculo-container');
+    const contenedorVehiculos = document.getElementById('vehiculos-container');
 
-    vehiculos.slice(0, 10).forEach(vehiculo => {
+    vehiculos.slice().forEach(vehiculo => {
         const vehiculoDiv = document.createElement('div');
         vehiculoDiv.classList.add('vehiculo');
 
@@ -132,5 +132,3 @@ async function obtenerVehiculos() {
         contenedorVehiculos.appendChild(vehiculoDiv);
     });
 }
-
-obtenerVehiculo();
