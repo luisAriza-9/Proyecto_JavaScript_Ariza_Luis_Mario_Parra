@@ -23,13 +23,16 @@ async function obtenerPersonajes() {
 
     const contenedorPersonajes = document.getElementById('personajes-container');
 
-    personajes.slice().forEach(personaje => {
+    personajes.slice(0, 10).forEach(personaje => {
         const personajeDiv = document.createElement('div');
         personajeDiv.classList.add('personaje');
 
         personajeDiv.innerHTML = `
             <h2>${personaje.name}</h2>
             <p>Altura: ${personaje.height} cm</p>
+            <p>Color de pelo: ${personaje.hair_color}</p>
+            <p>Color de piel: ${personaje.skin_color}</p>
+            <p>Color de hojos: ${personaje.eye_color}</p>
             <p>Género: ${personaje.gender}</p>
             <p>Año de Nacimiento: ${personaje.birth_year}</p>
             <p>Masa: ${personaje.mass}</p>
@@ -46,7 +49,7 @@ async function obtenerPlanetas() {
 
     const contenedorPlanetas = document.getElementById('planetas-container');
 
-    planetas.slice().forEach(planeta => {
+    planetas.slice(0, 10).forEach(planeta => {
         const planetaDiv = document.createElement('div');
         planetaDiv.classList.add('planeta');
 
@@ -54,7 +57,9 @@ async function obtenerPlanetas() {
             <h2>${planeta.name}</h2>
             <p>Periodo de rotación: ${planeta.rotation_period}</p>
             <p>Periodo orbital: ${planeta.orbital_period}</p>
+            <p>Diametro: ${planeta.diameter}</p>
             <p>Clima: ${planeta.climate}</p>
+            <p>Poblacion: ${planeta.population}</p>
             <p>Gravedad: ${planeta.gravity}</p>
             <p>Terreno: ${planeta.terrain}</p>
         `;
@@ -70,7 +75,7 @@ async function obtenerEspecies() {
 
     const contenedorEspecies = document.getElementById('especies-container');
 
-    especies.slice().forEach(especie => {
+    especies.slice(0, 10).forEach(especie => {
         const especieDiv = document.createElement('div');
         especieDiv.classList.add('especie');
 
@@ -79,6 +84,9 @@ async function obtenerEspecies() {
             <p>Clasificación: ${especie.classification}</p>
             <p>Designación: ${especie.designation}</p>
             <p>Altura media: ${especie.average_height}</p>
+            <p>Color de Pelo: ${especie.skin_colors}</p>
+            <p>Color de Ojos: ${especie.eye_colors}</p>
+            <p>Esperanza de vida: ${especie.average_lifespan}</p>
             <p>Lenguaje: ${especie.language}</p>
         `;
 
@@ -93,7 +101,7 @@ async function obtenerNaves() {
 
     const contenedorNaves = document.getElementById('naves-container');
 
-    naves.slice().forEach(nave => {
+    naves.slice(0, 10).forEach(nave => {
         const naveDiv = document.createElement('div');
         naveDiv.classList.add('nave');
 
@@ -101,8 +109,17 @@ async function obtenerNaves() {
             <h2>${nave.name}</h2>
             <p>Modelo: ${nave.model}</p>
             <p>Fabricante: ${nave.manufacturer}</p>
-            <p>Valor: ${nave.cost_in_credits}</p>
+            <p>costo en creditos: ${nave.cost_in_credits}</p>
+            <p>Longitud: ${nave.length}</p>
+            <p>Velocidad maxima: ${nave.max_atmosphering_speed}</p>
+            <p>Multitud: ${nave.crew}</p>
+            <p>Pasajeros: ${nave.passengers}</p>
             <p>Capacidad de carga: ${nave.cargo_capacity}</p>
+            <p>Consumibles: ${nave.consumables}</p>
+            <p>Hiper propulsion: ${nave.hyperdrive_rating}</p>
+            <p>MGLT: ${nave.MGLT}</p>
+            <p>Clase de nave: ${nave.starship_class}</p>
+            <p>Pilotos: ${nave.pilots}</p>
         `;
 
         contenedorNaves.appendChild(naveDiv);
@@ -116,7 +133,7 @@ async function obtenerVehiculos() {
 
     const contenedorVehiculos = document.getElementById('vehiculos-container');
 
-    vehiculos.slice().forEach(vehiculo => {
+    vehiculos.slice(0, 10).forEach(vehiculo => {
         const vehiculoDiv = document.createElement('div');
         vehiculoDiv.classList.add('vehiculo');
 
@@ -124,11 +141,40 @@ async function obtenerVehiculos() {
             <h2>${vehiculo.name}</h2>
             <p>Modelo: ${vehiculo.model}</p>
             <p>Fabricante: ${vehiculo.manufacturer}</p>
-            <p>Valor: ${vehiculo.cost_in_credits}</p>
-            <p>Capacidad de carga: ${vehiculo.cargo_capacity}</p>
+            <p>costo en creditos: ${vehiculo.cost_in_credits}</p>
             <p>Longitud: ${vehiculo.length}</p>
+            <p>Velocidad maxima: ${vehiculo.max_atmosphering_speed}</p>
+            <p>Multitud: ${vehiculo.crew}</p>
+            <p>Pasajeros: ${vehiculo.passengers}</p>
+            <p>Capacidad de carga: ${vehiculo.cargo_capacity}</p>
+            <p>Consumibles: ${vehiculo.consumables}</p>
         `;
 
         contenedorVehiculos.appendChild(vehiculoDiv);
+    });
+}
+
+
+async function obtenerPeliculas() {
+    const respuesta = await fetch('https://swapi.py4e.com/api/films/');
+    const datos = await respuesta.json();
+    const peliculas = datos.results;
+
+    const contenedorPeliculas= document.getElementById('peliculas-container');
+
+    peliculas.slice(0, 10).forEach(pelicula => {
+        const peliculaDiv = document.createElement('div');
+        peliculaDiv.classList.add('pelicula');
+
+        peliculaDiv.innerHTML = `
+            <h2>${pelicula.title}</h2>
+            <p>Episodio: ${pelicula.episode_id}</p>
+            <p>Historia: ${pelicula.opening_crawl}</p>
+            <p>Director: ${pelicula.director}</p>
+            <p>Productor: ${pelicula.producer}</p>
+            <p>Fecha de lanzamiento: ${pelicula.release_date}</p>
+        `;
+
+        contenedorPeliculas.appendChild(peliculaDiv);
     });
 }

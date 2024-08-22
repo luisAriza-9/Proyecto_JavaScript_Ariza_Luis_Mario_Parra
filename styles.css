@@ -26,7 +26,7 @@ button:hover {
     display: none;
 }
 
-.personaje, .planeta, .especie, .nave, .vehiculo {
+.personaje, .planeta, .especie, .nave, .vehiculo, .pelicula {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
