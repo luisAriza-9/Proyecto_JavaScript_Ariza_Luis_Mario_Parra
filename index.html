@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enciclopedia Galáctica de Star Wars</title>
-    <link rel="stylesheet" href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/proyecto/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guerra de las galaxias</title>
+  <link rel="stylesheet" href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/styles.css" />
 </head>
 <body>
-    <div class="stars"></div>
-    <div class="twinkling"></div>
-    <div class="clouds"></div>
-    
-    <header>
-        <h1>Enciclopedia Galáctica de Star Wars</h1>
-    </header>
+  <header>
+    <div class="logo">
+      <h1>Enciclopedia Galáctica de Star Wars</h1>
+    </div>
+  </header>
 
-    <nav>
-        <button id="btn-personajes">Personajes</button>
-        <button id="btn-planetas">Planetas</button>
-        <button id="btn-especies">Especies</button>
-        <button id="btn-naves">Naves</button>
-        <button id="btn-vehiculos">Vehículos</button>
-        <button id="btn-peliculas">Películas</button>
-        <div id="barra-busqueda" class="buscar-contenedor">
-            <input type="text" id="entrada-busqueda" placeholder="Buscar...">
-            <button id="boton-buscar">Buscar</button>
+  <main>
+    <section class="section_welcome">
+      <h1>Descubre los secretos de una galaxia muy, muy lejana. La Star Wars Wiki es tu mapa estelar para explorar los rincones más profundos del universo Star Wars.</h1>
+    </section>
+
+    <section class="section_card">
+      <div class="card">
+        <div class="card_content">
+          <picture>
+            <img src="">
+          </picture>
+          <div class="content_button">
+            <a href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/pages/info-characters.html">Personajes</a>
+          </div>
         </div>
-    </nav>
-   
-    <main>
-        <div id="personajes-container" class="contenedor"></div>
-        <div id="planetas-container" class="contenedor"></div>
-        <div id="especies-container" class="contenedor"></div>
-        <div id="naves-container" class="contenedor"></div>
-        <div id="vehiculos-container" class="contenedor"></div>
-        <div id="peliculas-container" class="contenedor"></div>
-    </main>
+      </div>
 
-   
-    <script src="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/proyecto/main.js"></script>
+      <div class="card">
+        <div class="card_content">
+          <picture>
+            <img src="">
+          </picture>
+          <div class="content_button">
+            <a href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/pages/info-films.html">Películas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_content">
+          <picture>
+            <img src="">
+          </picture>
+          <div class="content_button">
+            <a href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/pages/info-planets.html">Planetas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_content">
+          <picture>
+            <img src="">
+          </picture>
+          <div class="content_button">
+            <a href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/pages/info-starship.html">Naves</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_content">
+          <picture>
+            <img src="">
+          </picture>
+          <div class="content_button">
+            <a href="../Proyecto_JavaScript_Ariza_Luis_Mario_Parra/pages/info-vehicles.html">Vehículos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Que la fuerza te Acompañe &amp; fuerza <span>&hearts;</span></p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guerra de las galaxias</title>
+    <link rel="stylesheet" href="../styles/films.css" />
+    <script defer src="../script/tipo.js"></script>
+    <script defer src="../script/data_films.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Enciclopedia Galáctica de Star Wars</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="info-characters.html">
+                <img src="" alt="characters" />
+                <p>Personajes</p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <img src="" alt="films" />
+                <a href="#films">Películas</a>
+              </a>
+            </li>
+            <li>
+              <a href="info-planets.html">
+                <img src="../images/planet.png" alt="planets" />
+                <p href="#planets">Planetas</p>
+              </a>
+            </li>
+            <li>
+              <a href="info-starship.html">
+                <img src="" alt="spaceships" />
+                <p>Naves</p>
+              </a>
+            </li>
+            <li>
+              <a href="info-vehicles.html">
+                <img src="" alt="vehicles" />
+                <p>Vehículos</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </nav>
+    </header>
+
+    <div id="fullscreen-menu" class="fullscreen-menu">
+      <div class="menu-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <ul>
+          <li>
+            <img src="" alt="characters" />
+            <a href="info-characters.html">Personajes</a>
+          </li>
+          <li>
+            <img src="" alt="films" />
+            <a>Películas</a>
+          </li>
+          <li>
+            <img src="" alt="planets" />
+            <a href="info-planets.html">Planetas</a>
+          </li>
+          <li>
+            <img src="../images/spaceships.png" alt="spaceships" />
+            <a id="nave" href="info-starship.html">Naves</a>
+          </li>
+          <li>
+            <img id="car_img" src="" alt="vehicles" />
+            <a id="car" href="info-vehicles.html">Vehículos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <section id="people" class="section">
+        <h2>Películas</h2>
+        <div class="menu">
+          <button id="infoFilms" onclick="showSection('episode-info')">
+            Información del Episodio
+          </button>
+          <button id="filmCharacters" onclick="showSection('film-characters')">
+            Personajes de la Película
+          </button>
+          <button id="filmPlanets" onclick="showSection('film-planets')">
+            Planetas que Visitaron
+          </button>
+          <button id="filmStarShips" onclick="showSection('film-starships')">
+            Naves Espaciales
+          </button>
+          <button id="filmVehicles" onclick="showSection('film-vehicles')">Vehículos</button>
+        </div>
+        <div id="episode-info" class="content hidden">
+          <h3>Información del Episodio</h3>
+          <div id="info-films"></div>
+        </div>
+        <div id="film-characters" class="content hidden">
+          <h3>Personajes de la Película</h3>
+           <div id="info-characters"></div>
+        </div>
+        <div id="film-planets" class="content hidden">
+          <h3>Planetas que Visitaron</h3>
+          <div id="info-planets"></div>
+        </div>
+        <div id="film-starships" class="content hidden">
+          <h3>Naves Espaciales</h3>
+          <div id="info-starship"></div>
+        </div>
+        <div id="film-vehicles" class="content hidden">
+          <h3>Vehículos</h3>
+          <div id="info-vehicles"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Que la fuerza te Acompañe &amp; fuerza <span>&hearts;</span></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+/* Reset y estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Star Jedi", sans-serif; /* Fuente temática de Star Wars */
+  background: url("https://example.com/star-wars-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f2f2f2; /* Blanco ahumado, como el texto de las naves */
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/*Cabecera*/
+header {
+  background: #111111; /* Negro profundo, como el espacio exterior */
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #555555; /* Gris metálico */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2vw;
+  color: #ffcc00; /* Amarillo dorado, como el sable de luz de Rey */
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.8); /* Brillo dorado */
+}
+
+.logo nav {
+  display: flex;
+  width: 50%;
+}
+
+.logo nav ul {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.logo nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f2f2f2; /* Blanco ahumado */
+  font-weight: 700;
+  text-shadow: 0 0 4px rgba(242, 242, 242, 0.6); /* Sutil brillo */
+}
+
+.logo nav ul li img {
+  width: 30%;
+}
+
+.logo nav ul li {
+  border: 1px solid #555555; /* Gris metálico */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.logo nav ul li:hover {
+  border: 1px solid #ffcc00; /* Borde dorado al pasar el ratón */
+  transform: scale(1.05);
+}
+
+.menu-content ul {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffcc00; /* Amarillo dorado */
+}
+
+.menu-content ul li img {
+  display: none;
+}
+
+/*Principal*/
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  background: rgba(17, 17, 17, 0.85); /* Negro semitransparente */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Secciones de datos */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 3rem;
+  color: #ffcc00; /* Amarillo dorado */
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8); /* Brillo dorado */
+}
+
+/* Botones de menú */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.menu button {
+  background: linear-gradient(135deg, #333333, #555555); /* De gris oscuro a metálico */
+  color: #ffcc00; /* Amarillo dorado */
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 5px rgba(255, 204, 0, 0.8); /* Sutil brillo dorado */
+}
+
+.menu button:hover {
+  background: linear-gradient(135deg, #555555, #333333); /* Inversión de los colores */
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido de las secciones */
+.content {
+  background: rgba(17, 17, 17, 0.9); /* Negro más opaco */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.content h3 {
+  text-transform: uppercase;
+  color: #ffcc00; /* Amarillo dorado */
+  text-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+
+.content.hidden,
+.search.hidden {
+  display: none;
+}
+
+.content:not(.hidden),
+.search:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/*Tabla*/
+.table-container {
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  border-collapse: collapse;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+th,
+td {
+  border: 1px solid #555555; /* Gris metálico */
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+  text-align: center;
+  color: #f2f2f2; /* Blanco ahumado */
+  text-transform: capitalize;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(17, 17, 17, 0.95);
+  color: #ffcc00; /* Amarillo dorado */
+  border-top: 4px solid #555555; /* Gris metálico */
+  position: relative;
+  z-index: 100;
+  font-size: 1rem;
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.8); /* Brillo dorado */
+  min-height: 8vh;
+  max-height: 10vh;
+  height: auto;
+}
+
+footer span {
+  color: #ffcc00; /* Amarillo dorado */
+  animation: pulse 1.5s infinite;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #111111; /* Negro profundo */
+  border: 1px solid #555555; /* Gris metálico */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  max-width: 100%;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+  border: 1px solid #ffcc00; /* Borde dorado al pasar el ratón */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc00; /* Amarillo dorado */
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #f2f2f2; /* Blanco ahumado */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+

@@ -1,0 +1,91 @@
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("https://example.com/star-wars-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f2f2f2;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/*Cabecera*/
+header {
+  background: #000000;
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #b2b2b2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2vw;
+  /* Considera una fuente Star Wars aquí */
+}
+
+/*Principal*/
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2.35rem;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 2px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+main h1 {
+  font-size: 2vw;
+  color: #ffc107; /* Color secundario */
+}
+
+main p {
+  font-size: 1.2vw;
+  text-align: justify;
+}
+
+.section_welcome {
+  width: 100%;
+  padding: 6px;
+  background: #333333;
+}
+
+.section_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 18%;
+  min-width: 2vw;
+  min-height: 30vh;
+  max-height: 50vh;
+  height: auto;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #333333;
+  cursor: pointer;
+}
+

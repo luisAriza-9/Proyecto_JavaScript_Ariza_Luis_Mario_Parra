@@ -1,0 +1,252 @@
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Starjedi", sans-serif; /* Fuente temática de Star Wars */
+  background: url("https://example.com/star-wars-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #d8d2d2; /* Verde claro, como las pantallas de las naves */
+  line-height: 1.6;
+}
+
+/* Cabecera */
+header {
+  background: #0b0c0d; /* Negro profundo, como el espacio */
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #ffe81f; /* Amarillo, como el texto del logo de Star Wars */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra sutil con blanco */
+  border-radius: 0 0 10px 10px; /* Bordes redondeados */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2vw;
+  color: #ffe81f; /* Amarillo Star Wars */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Brillo sutil */
+}
+
+.logo nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.logo nav ul li {
+  border: 1px solid #ffe81f; /* Bordes amarillos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.logo nav ul li a {
+  text-decoration: none;
+  color: #d8d2d2; /* Verde claro */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Principal */
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  background: rgba(11, 12, 13, 0.9); /* Fondo oscuro con opacidad */
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2); /* Sombra sutil */
+}
+
+/* Secciones de datos */
+.section h2 {
+  font-size: 3rem;
+  color: #ffe81f; /* Amarillo Star Wars */
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Brillo */
+}
+
+/* Botones de menú */
+.menu button {
+  background: linear-gradient(135deg, #ffe81f, #0b0c0d); /* Amarillo y negro */
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.3); /* Sombra */
+}
+
+.menu button:hover {
+  background: linear-gradient(135deg, #0b0c0d, #ffe81f); /* Inversión de colores */
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 12px rgba(255, 255, 255, 0.5); /* Sombra */
+}
+
+/* Contenido de las secciones */
+.content {
+  background: rgba(11, 12, 13, 0.95); /* Fondo oscuro casi opaco */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Sombra suave */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.content h3 {
+  text-transform: uppercase;
+  color: #ffe81f; /* Amarillo Star Wars */
+}
+
+.content:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tabla */
+.table-container {
+  width: 100%;
+  border: 1px solid #ffe81f; /* Amarillo Star Wars */
+  border-collapse: collapse;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(11, 12, 13, 0.95); /* Fondo oscuro casi opaco */
+  color: #ffe81f; /* Amarillo Star Wars */
+  border-top: 4px solid #ffe81f;
+  font-size: 1rem;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Brillo */
+}
+
+footer span {
+  color: #ffe81f;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+#info-films, #info-characters, #info-planets, #info-starship, #info-vehicles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ffe81f;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+  margin: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 200px;
+  background-color: #0b0c0d;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-header h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #ffe81f; /* Amarillo Star Wars */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .logo h1 {
+      font-size: 6vw;
+  }
+
+  .logo nav {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .fullscreen-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(11, 12, 13, 0.98); /* Fondo oscuro */
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .fullscreen-menu.active {
+      display: flex;
+  }
+
+  .menu-content ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      text-align: center;
+  }
+
+  .menu-content ul li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ffe81f; /* Bordes amarillos */
+      padding: 5px 10px;
+      border-radius: 5px;
+      width: 50%;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); /* Sombra */
+  }
+
+  .menu-content ul li a {
+      font-size: 20px;
+      color: #ffe81f; /* Amarillo */
+      text-decoration: none;
+      text-transform: uppercase;
+  }
+
+  main {
+      margin-top: 5rem;
+  }
+
+  .card {
+      width: 100%;
+      margin: 8px 0;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guerra de las galaxias</title>
+    <link rel="stylesheet" href="../styles/vechicle.css" />
+    <script defer src="../script/tipo.js"></script>
+    <script defer src="../script/data_vechicles.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Enciclopedia Galáctica de Star Wars</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="info-characters.html">
+                <img src="../images/character.png" alt="characters" />
+                <p>Personajes</p>
+              </a>
+            </li>
+            <li>
+              <a href="info-films.html">
+                <img src="" alt="films" />
+                <p>Películas</p>
+              </a>
+            </li>
+            <li>
+              <a href="info-planets.html">
+                <img src="../images/planet.png" alt="planets" />
+                <p>Planetas</p>
+              </a>
+            </li>
+            <li>
+              <a href="info-starship.html">
+                <img src="../images/spaceships.png" alt="spaceships" />
+                <p>Naves</p>
+              </a>
+            </li>
+            <li>
+              <a>
+                <img src="../images/vehicles.png" alt="vehicles" />
+                <p>Vehículos</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </nav>
+    </header>
+
+    <div id="fullscreen-menu" class="fullscreen-menu">
+      <div class="menu-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <ul>
+          <li>
+            <img src="../images/character.png" alt="characters" />
+            <a href="info-characters.html"> Personajes </a>
+          </li>
+          <li>
+            <img src="../images/films.png" alt="films" />
+            <a href="info-films.html">Películas</a>
+          </li>
+          <li>
+            <img src="../images/planet.png" alt="planets" />
+            <a href="info-planets.html">Planetas</a>
+          </li>
+          <li>
+            <img src="../images/spaceships.png" alt="spaceships" />
+            <a id="nave" href="info-starship.html">Naves</a>
+          </li>
+          <li>
+            <img id="car_img" src="../images/vehicles.png" alt="vehicles" />
+            <a id="car">Vehículos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main>
+      <section id="vehicles" class="section">
+        <h2>Vehículos</h2>
+        <div class="menu">
+          <button id="listVehicle" onclick="showSection('vehicle-list')">
+            Lista de Vehículos
+          </button>
+          <button id="listModels" onclick="showSection('vehicle-models')">Modelos</button>
+        </div>
+        <div id="vehicle-list" class="content hidden">
+          <h3>Lista de Vehículos</h3>
+          <div id="vehicle-cards" class="card-container"></div>
+        </div>
+        <div id="vehicle-models" class="content hidden">
+          <h3>Modelos de Vehículos</h3>
+          <div id="model-cards" class="card-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Que la fuerza te Acompañe &amp; Fuerza <span>&hearts;</span></p>
+    </footer>
+  </body>
+</html>

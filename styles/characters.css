@@ -1,0 +1,268 @@
+/* Reset y estilos generales*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Starjedi", sans-serif; /* O cualquier fuente similar a Star Wars */
+  background: url("https://example.com/star-wars-background.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
+  color: #d8d2d2; /* Un verde claro similar al texto de las pantallas de las naves */
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/*Cabecera*/
+header {
+  background: #000000; /* Negro como el espacio */
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #b2b2b2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+  border-radius: 0 0 10px 10px; /* Bordes redondeados */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2vw;
+  color: #f2f2f2; /* Blanco para resaltar */
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8); /* Brillo sutil */
+}
+
+.logo nav {
+  display: flex;
+  width: 50%;
+}
+
+.logo nav ul {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.logo nav ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #d8d2d2; /* Verde claro */
+  font-weight: 700;
+}
+
+.logo nav ul li img {
+  width: 30%;
+}
+
+.logo nav ul li {
+  border: 1px solid #333; /* Borde gris oscuro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-content ul {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f2f2f2; /* Blanco */
+}
+
+.menu-content ul li img {
+  display: none;
+}
+
+/*Principal*/
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  background: rgba(0, 0, 0, 0.8); /* Negro semi-transparente */
+  border-radius: 2px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); /* Sombra fuerte */
+}
+
+/* Secciones de datos */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section h2 {
+  font-size: 3rem;
+  color: #f2f2f2; /* Blanco */
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Brillo del texto */
+}
+
+/* Botones de menú */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  }
+  .menu button {
+    background: linear-gradient(135deg, #333, #111); /* De gris oscuro a negro */
+    color: #d8d2d2; /* Verde claro */
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+  }
+  
+  .menu button:hover {
+    background: linear-gradient(135deg, #111, #333); /* Inversión de los colores */
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7); /* Sombra más profunda */
+  }
+  
+  /* Contenido de las secciones */
+  .content {
+    background: rgba(0, 0, 0, 0.85); /* Negro más opaco */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Sombra más fuerte */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  
+  .content h3 {
+    text-transform: uppercase;
+    color: #d8d2d2; /* Verde claro */
+    text-shadow: 0 0 5px rgba(216, 210, 210, 0.8); /* Sutil brillo */
+  }
+  
+  .content.hidden,
+  .search.hidden {
+    display: none;
+  }
+  
+  .content:not(.hidden),
+  .search:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  
+  /* Tabla */
+  .table-container {
+    width: 100%;
+    border: 1px solid #d8d2d2;
+    border-collapse: collapse;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
+  th,
+  td {
+    border: 1px solid #333; /* Gris oscuro */
+    padding: 10px;
+    text-align: center;
+    color: #d8d2d2; /* Verde claro */
+    text-transform: capitalize;
+  }
+  
+  /* Pie de página */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.95); /* Negro casi opaco */
+    color: #d8d2d2; /* Verde claro */
+    border-top: 4px solid #b2b2b2; /* Gris claro */
+    position: relative;
+    z-index: 100;
+    font-size: 1rem;
+  }
+  
+  footer span {
+    color: #d8d2d2; /* Verde claro */
+    animation: pulse 1.5s infinite;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: #111; /* Negro profundo */
+    border: 1px solid #333; /* Gris oscuro */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden;
+    width: 300px;
+    max-width: 100%;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7); /* Sombra más profunda */
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #d8d2d2; /* Verde claro */
+  }
+  
+  .card-description {
+    font-size: 1rem;
+    color: #d8d2d2; /* Verde claro */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    .logo h1 {
+      font-size: 6vw;
+    }
+  
+    .logo nav {
+      display: none;
+    }
+  }
+  
