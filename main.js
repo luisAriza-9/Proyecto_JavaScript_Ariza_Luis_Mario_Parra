@@ -1,4 +1,4 @@
-// main.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('nav button');
     const containers = document.querySelectorAll('.contenedor');
@@ -16,28 +16,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-async function obtenerPersonajes() {
-    const respuesta = await fetch('https://swapi.py4e.com/api/people/');
+async function fetchData(url) {
+    const respuesta = await fetch(url);
     const datos = await respuesta.json();
-    const personajes = datos.results;
+    return datos.results;
+}
 
+function createElementWithClass(tag, className) {
+    const element = document.createElement(tag);
+    element.classList.add(className);
+    return element;
+}
+
+function appendChildren(parent, children) {
+    children.forEach(child => parent.appendChild(child));
+}
+
+async function obtenerPersonajes() {
+    const personajes = await fetchData('https://swapi.py4e.com/api/people/');
     const contenedorPersonajes = document.getElementById('personajes-container');
 
     personajes.slice(0, 10).forEach(personaje => {
-        const personajeDiv = document.createElement('div');
-        personajeDiv.classList.add('personaje');
-
+        const personajeDiv = createElementWithClass('div', 'personaje');
         personajeDiv.innerHTML = `
             <h2>${personaje.name}</h2>
             <p>Altura: ${personaje.height} cm</p>
             <p>Color de pelo: ${personaje.hair_color}</p>
             <p>Color de piel: ${personaje.skin_color}</p>
-            <p>Color de hojos: ${personaje.eye_color}</p>
+            <p>Color de ojos: ${personaje.eye_color}</p>
             <p>Género: ${personaje.gender}</p>
             <p>Año de Nacimiento: ${personaje.birth_year}</p>
             <p>Masa: ${personaje.mass}</p>
         `;
-
         contenedorPersonajes.appendChild(personajeDiv);
     });
 }
@@ -119,7 +129,6 @@ async function obtenerNaves() {
             <p>Hiper propulsion: ${nave.hyperdrive_rating}</p>
             <p>MGLT: ${nave.MGLT}</p>
             <p>Clase de nave: ${nave.starship_class}</p>
-            <p>Pilotos: ${nave.pilots}</p>
         `;
 
         contenedorNaves.appendChild(naveDiv);
